@@ -1,0 +1,40 @@
+{
+    "people": [
+        {
+            "name": "Lucas Feliciano de Almeida Teixeira",
+            "CPF": "12345678900",
+            "situation": "regular",
+            "age": 21,
+            "applicationaccount": {
+                "numberaccount": "557932-5"
+            },
+            "checkingaccount": {
+                "numberaccount": "783292-5"
+            }
+        },
+        {
+            "name": "Pedro Paiva dos Santos",
+            "CPF": "328123892",
+            "situation": "irregular",
+            "age": 25,
+            "applicationaccount": {
+                "numberaccount": "123456-5"
+            },
+            "checkingaccount": {
+                "numberaccount": "091238-5"
+            }
+        },
+                {
+            "name": "Carlos dos Santos ",
+            "CPF": "229038921",
+            "situation": "regular",
+            "age": 21,
+            "applicationaccount": {
+                "numberaccount": "525456-6"
+            },
+            "checkingaccount": {
+                "numberaccount": "231238-7"
+            }
+        }
+    ]
+}
