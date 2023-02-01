@@ -1,0 +1,20 @@
+@import '../../../variables/colors.scss';
+
+button {
+    background-color: $primary-color;
+    color: #fff;
+    border: none;
+    padding: .8rem .2rem;
+
+    &.expand {
+        display: block;
+        width: 100%;
+    }
+
+    &.secondary {
+        background-color: #fff;
+        color: $primary-color;
+        padding: .7rem .2rem;
+        border: 1px solid $primary-color;
+    }
+}

@@ -1,0 +1,28 @@
+<div class="onboarding">
+    <div class="onboarding-header-container">
+        <img class="logo" src="../../../assets/ailos-logo.PNG" />
+        <div class="onboarding-title-container">
+            <h1>Nova admissão cooperado</h1>
+            <p>Cadastro/Admissão do Coperado/ Nova Admissoão de Cooperado</p>
+        </div>
+        <img class="hamburguer-menu" src="../../../assets/hamburguer-menu.svg" />
+    </div>
+
+
+    <div class="onboarding-form-container">
+        <div>
+            <h2>Informe o CPF do Futuro Coperado</h2>
+            <h4>Se necessário você poderá duplicar uma conta existente ou
+                pausar e retornar este cadastro futuramente.
+                Digite apenas os números (sem pontos e traços)</h4>
+        </div>
+
+        <app-input class="input-margin" [placeholder]="'000.000.000.000'" [type]="'number'" [label]="'CPF'"></app-input>
+        <app-button [title]="'Consultar por CPF'"></app-button>
+    </div>
+
+    <div class="onboarding-action-buttons-container">
+        <app-button class="button-margin" [title]="'Iniciar nova admissão'"></app-button>
+        <app-button [title]="'Dicas para abertura de conta'" [buttonType]="'secondary'"></app-button>
+    </div>
+</div>
