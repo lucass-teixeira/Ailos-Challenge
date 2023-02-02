@@ -1,7 +1,16 @@
 <ng-container *ngIf="(messagesService.errors$ | async) as errors">
-    <div class="messages-container" *ngFor="let error of errors" [ngClass]="error  ? error.alertType : ''">
-        <div class="message">
-            {{error.message}}
+    <ng-container *ngIf="showMessages">
+
+
+        <div class="messages-container" *ngFor="let error of errors" [ngClass]="error  ? error.alertType : ''">
+            <div class="message">
+                {{error.message}}
+            </div>
         </div>
-    </div>
+        <div class="icon-container">
+            <fa-icon class="close" (click)="closeMessage()" animation="beat" icon="close" pull="right"
+                [style]="{position: 'absolute', top: '10px', right: '10px', cursor: 'pointer'}"></fa-icon>
+        </div>
+    </ng-container>
+
 </ng-container>

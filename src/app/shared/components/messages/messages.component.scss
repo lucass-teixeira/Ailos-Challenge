@@ -8,11 +8,16 @@
     width: 100%;
     top: 0;
 
-    .close {
-        position: absolute;
-        right: 10px;
-        top: 10px;
-        cursor: pointer;
+    .icon-container {
+        position: relative;
+        background-color: blue;
+        .close {
+            right: 10px;
+            top: 0;
+            bottom: 0;
+            color: white;
+            cursor: pointer;
+        }
     }
 
     &.error {

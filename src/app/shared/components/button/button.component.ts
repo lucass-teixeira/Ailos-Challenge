@@ -8,6 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class ButtonComponent implements OnInit {
 
   @Input() title!: string;
+  @Input() disabled: boolean = true;
   @Input() buttonType: 'primary' | 'secondary' = 'primary';
   @Input() fill: 'expand' | 'pattern' = 'expand';
   constructor() { }

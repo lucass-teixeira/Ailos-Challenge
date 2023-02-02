@@ -18,7 +18,7 @@
         </div>
 
         <app-input class="input-margin" [placeholder]="'000.000.000.000'" [type]="'number'" [label]="'CPF'"></app-input>
-        <app-button [title]="'Consultar por CPF'"></app-button>
+        <app-button [disabled]="showCPFButton" [title]="'Consultar por CPF'" (click)="checkCPF()" (inputChanged)="inputCPFChanged($event)"></app-button>
     </div>
 
     <div class="onboarding-action-buttons-container">

@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { FaIconComponent, FontAwesomeModule } from '@fortawesome/angular-fontawesome/public_api';
 
 import { MessagesComponent } from './messages.component';
 
@@ -8,7 +9,7 @@ describe('MessagesComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MessagesComponent ]
+      declarations: [ MessagesComponent ],
     })
     .compileComponents();
 
