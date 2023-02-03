@@ -9,6 +9,9 @@ import { InputComponent } from './shared/components/input/input.component';
 import { SharedModule } from './shared/shared.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
 import { CommonModule } from '@angular/common';
+import {HttpClientModule}  from '@angular/common/http';
+import {FormsModule} from '@angular/forms';
+
 
 
 @NgModule({
@@ -20,7 +23,8 @@ import { CommonModule } from '@angular/common';
     BrowserModule,
     SharedModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,16 +1,16 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, filter, Observable, tap } from 'rxjs';
-import { AlertType, ErrrorMessage } from './message-model';
+import { AlertType, ErrorMessage } from './message-model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MessagesService {
 
-  private subject = new BehaviorSubject<ErrrorMessage[]>([]);
+  private subject = new BehaviorSubject<ErrorMessage[]>([]);
   alertType: AlertType = AlertType.sucess;
 
-  errors$: Observable<ErrrorMessage[]> = this.subject.asObservable()
+  errors$: Observable<ErrorMessage[]> = this.subject.asObservable()
     .pipe(
       filter((messages )=> messages && messages.length > 0),
       tap(console.log)
@@ -18,7 +18,7 @@ export class MessagesService {
     
   constructor() { }
 
-  showErrrors(...errors: ErrrorMessage[]) {
+  showErrrors(...errors: ErrorMessage[]) {
     this.subject.next(errors);
   }
 }

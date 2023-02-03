@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FaIconLibrary } from '@fortawesome/angular-fontawesome';
-import { faClose  } from '@fortawesome/free-solid-svg-icons';
+import { faClose, faUser, faCircleCheck } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-root',
@@ -12,6 +12,6 @@ export class AppComponent {
 
   constructor(library: FaIconLibrary) {
     // Add multiple icons to the library
-    library.addIcons(faClose);
+    library.addIcons(faClose, faUser, faCircleCheck);
   }
 }

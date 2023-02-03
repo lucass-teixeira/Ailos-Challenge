@@ -1,7 +1,6 @@
 {
-  "cooperator": [
+  "people": [
     {
-      "id": 1,
       "name": "Lucas Feliciano de Almeida Teixeira",
       "CPF": "12345678900",
       "situation": "regular",
@@ -14,7 +13,6 @@
       }
     },
     {
-      "id": 2,
       "name": "Pedro Paiva dos Santos",
       "CPF": "328123892",
       "situation": "irregular",
@@ -27,7 +25,6 @@
       }
     },
     {
-      "id": 3,
       "name": "Carlos dos Santos ",
       "CPF": "229038921",
       "situation": "regular",

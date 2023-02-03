@@ -3,7 +3,7 @@ export enum AlertType{
     sucess = "sucess",
   }
   
-  export class ErrrorMessage{
+  export class ErrorMessage{
     alertType: AlertType;
     message: string;
   } 

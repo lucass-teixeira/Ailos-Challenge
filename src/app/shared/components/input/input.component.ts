@@ -11,6 +11,8 @@ export class InputComponent implements OnInit {
   @Input() label!: string;
   @Input() placeholder!: string;
 
+  value: string;
+
   inputChanged = new EventEmitter<string>();
   constructor() { }
 
@@ -20,4 +22,5 @@ export class InputComponent implements OnInit {
   inputChanges(text: any){
     this.inputChanged.next(text.toString())
   }
+
 }

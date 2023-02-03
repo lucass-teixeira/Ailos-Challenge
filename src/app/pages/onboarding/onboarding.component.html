@@ -17,13 +17,79 @@
                 Digite apenas os números (sem pontos e traços)</h4>
         </div>
 
-        <app-input class="input-margin" [placeholder]="'000.000.000.000'" [type]="'number'" [label]="'CPF'"></app-input>
-        <app-button [disabled]="showCPFButton" [title]="'Consultar por CPF'" (click)="checkCPF()" (inputChanged)="inputCPFChanged($event)"></app-button>
+        <app-input #inputCPF class="input-margin" [placeholder]="'000.000.000.000'" [type]="'number'"
+            [label]="'CPF'"></app-input>
+        <app-button [disabled]="showCPFButton" [title]="'Consultar por CPF'" (click)="checkCPF(inputCPF)"
+            (inputChanged)="inputCPFChanged($event)"></app-button>
     </div>
+
+
+    <ng-container *ngIf="cooperator$">
+        <div *ngFor="let c of (cooperator$ | async) as cooperators">
+            <div class="card-container">
+                <div class="card-container-header">
+                    <h1>Situação Cadastral do CPF</h1>
+                    <h3>Consulta da receita federal</h3>
+                </div>
+
+                <div class="card-container-footer">
+                    <div class="flex">
+                        <fa-icon icon="user" pull="left"></fa-icon>
+                        <div class="item-lf-margin card-container-footer-name">
+                            <h4>Nome</h4>
+                            <p class="opaque" >{{c.name}}</p>
+                        </div>
+                    </div>
+
+                    <div class="flex">
+                        <fa-icon icon="circle-check" style="color: #2deb5f" class="fa-thin" pull="left"></fa-icon>
+                        <div class="item-lf-margin">
+                            <p>situação do CPF</p>
+                            <p class="opaque">{{c.situation}}</p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </ng-container>
+
 
     <div class="onboarding-action-buttons-container">
         <app-button class="button-margin" [title]="'Iniciar nova admissão'"></app-button>
-        <app-button [title]="'Dicas para abertura de conta'" [buttonType]="'secondary'"></app-button>
+        <app-button [title]="'Dicas para abertura de conta'" (click)="showTipContainer = true"
+            [buttonType]="'secondary'"></app-button>
+    </div>
+
+    <div class="onboarding-tips-account-container" *ngIf="showTipContainer">
+
+        <fa-icon icon="close" (click)="showTipContainer = false" pull="right"
+            [style]="{position: 'absolute', top: '10px', right: '10px', cursor: 'pointer'}"></fa-icon>
+
+        <div class="onboarding-tips-account-container-content">
+            <h2 class="item-bt-margin">Checklist para abertura de conta</h2>
+            <p class="item-bt-margin">Confira algumas dicas que irão lhe ajudar neste atendimento para que a admissão
+                aconteça da melhor forma
+                possível.</p>
+
+            <div class="onboarding-tips-account-container-content-cheks">
+                <div>
+                    <input class="item-rt-margin" id="first" type="checkbox" />
+                    <label for="first">Conheça seu cooperado</label>
+                </div>
+                <div>
+                    <input class="item-rt-margin" id="second" type="checkbox" />
+                    <label for="second">Fale sobre a Cooperativa</label>
+                </div>
+                <div>
+                    <input class="item-rt-margin" id="third" type="checkbox" />
+                    <label for="third">Documentos e comprovações necessárias</label>
+                </div>
+            </div>
+
+        </div>
     </div>
 
     <app-messages></app-messages>

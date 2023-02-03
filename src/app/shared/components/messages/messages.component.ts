@@ -1,6 +1,6 @@
 import { Component, OnChanges, OnInit } from '@angular/core';
 import { Observable, tap } from 'rxjs';
-import { ErrrorMessage } from '../../services/message-model';
+import { ErrorMessage } from '../../services/message-model';
 import { MessagesService } from '../../services/messages.service';
 
 // import { faCoffee  } from '@fortawesome/free-solid-svg-icons';
@@ -13,7 +13,7 @@ import { MessagesService } from '../../services/messages.service';
 export class MessagesComponent implements OnInit, OnChanges {
 
   showMessages = true;
-  errors$: Observable<ErrrorMessage[]>;
+  errors$: Observable<ErrorMessage[]>;
 
   constructor(public messagesService: MessagesService) {
   }

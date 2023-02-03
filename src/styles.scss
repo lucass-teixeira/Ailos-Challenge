@@ -1,6 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+.item-rt-margin {
+    margin-right: 4px;
+}
+
+.item-lf-margin {
+    margin-left: 4px;
+}
+
+.item-bt-margin {
+    margin-bottom: .8rem;
+}
+
+
+.flex-justify-between{
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex{
+    display: flex;
+}
+
+.opaque{
+    opacity: .6;
 }
