@@ -25,7 +25,7 @@ export class OnBoardingService {
         }
       }),
       catchError(error =>{
-        const errorMessage: ErrorMessage = {message: 'Houve um erro no servidor. Verifique se o dispositivo esta conectado a internet', alertType: AlertType.error}
+        const errorMessage: ErrorMessage = {message: 'Houve um erro no servidor, verifque se o servidor esta rodando na porta 3000.', alertType: AlertType.error}
         this._messageService.showErrrors(errorMessage)
         return of([]);
       })

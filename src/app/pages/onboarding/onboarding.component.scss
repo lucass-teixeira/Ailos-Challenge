@@ -10,14 +10,18 @@
         display: flex;
         justify-content: space-between;
 
-        .logo{
+        .logo {
             height: 50px;
         }
 
-        .hamburguer-menu{
+        .hamburguer-menu {
             height: 40px;
             margin-right: 10px;
             padding: 10px;
+        }
+
+        &-header{
+            display: none;
         }
     }
 
@@ -38,19 +42,20 @@
 
     &-form-container {
         margin: 0 auto;
-        max-width: 280px;
+        @include width-container;
 
-        h3{
+        h3 {
             font-size: 1rem;
         }
-        h4{
+
+        h4 {
             font-size: small;
             font-weight: 400;
             opacity: 0.7;
             margin-bottom: 40px;
         }
 
-        .input-margin{
+        .input-margin {
             margin-right: 10px;
         }
     }
@@ -58,7 +63,7 @@
     &-action-buttons-container {
         position: absolute;
         background-color: #fff;
-        padding: 1rem;
+        padding: calc($width-nav + 40px) 1rem 1rem 1rem;
         width: 100%;
         bottom: 0;
 
@@ -68,7 +73,7 @@
 
     }
 
-    &-tips-account-container{
+    &-tips-account-container {
         background-color: #fff;
         height: 100%;
         width: 100%;
@@ -77,23 +82,138 @@
         display: flex;
         align-items: center;
 
-        &-content{
+        &-content {
 
             margin-bottom: 1rem;
-            max-width: 250px;
-            margin: 0 auto;
+            @include width-container;
+            margin: 40px auto;
         }
     }
 
-    .card-container{
-        background-color: #fff;
-        padding: 1rem;
+    &-result-container {
+        margin-top: 20px;
+        display: grid;
+        grid-gap: 20px;
+    }
 
-        @include width-container;
 
-        &-footer{
-            &-name{
+    .menu-mobile {
+        background-color: $primary-color;
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 100%;
+
+        ul {
+            color: white;
+            @include width-container;
+
+            li {
+                list-style: none;
+                margin: 1rem;
+                a {
+                    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                    font-weight: 400;
+                    background-color: #3485ad;
+                    border-radius: 4px;
+                    padding: 1rem;
+                    width: 100%;
+                    display: block;
+
+                }
             }
+        }
+    }
+}
+
+
+//Desktop 
+
+@media (min-width: 1024px) {
+    .onboarding {
+        background-color: $secondary-color;
+        height: 100vh;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+        &-header-container {
+            display: flex;
+            justify-content: space-between;
+            background-color: white;
+            padding-left: $width-nav;
+    
+            .logo {
+                display: none;
+            }
+    
+            .hamburguer-menu {
+                display: none;
+            }
+        }
+    
+        &-title-container {
+            padding: 10px;
+    
+            h1 {
+                font-size: 35px;
+                font-weight: 600;
+            }
+    
+            p {
+                opacity: .6;
+            }
+        }
+    
+        &-form-container {
+            margin: 0 auto;
+            @include width-container;
+    
+            h3 {
+                font-size: 1rem;
+            }
+    
+            h4 {
+                font-size: small;
+                font-weight: 400;
+                opacity: 0.7;
+                margin-bottom: 40px;
+            }
+    
+            .input-margin {
+                margin-right: 10px;
+            }
+        }
+    
+        &-action-buttons-container {
+            display: flex;
+            padding-left: $width-nav;
+    
+            .button-margin {
+                margin-right: 20px;
+            }
+    
+        }
+    
+        &-tips-account-container {
+            background-color: #fff;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            position: absolute;
+            display: flex;
+            align-items: center;
+    
+            &-content {
+    
+                margin-bottom: 1rem;
+                @include width-container;
+                margin: 40px auto;
+            }
+        }
+    
+        &-result-container {
+            margin-top: 20px;
+            display: grid;
+            grid-gap: 20px;
         }
 
     }

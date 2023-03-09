@@ -1,0 +1,28 @@
+@import '../../../variables/colors.scss';
+@import '../../../variables/mixins.scss';
+
+.card-container{
+    background-color: #fff;
+    padding: 1rem;
+    margin-top: 30px;
+
+    @include width-container;
+    @include box-shadow;
+
+    &-footer{
+        &-name{
+        }
+    }
+
+    &-header{
+        h1{
+            font-size: 1.2rem;
+        }
+
+        h3{
+            font-size: .8rem;
+            opacity: .9;
+        }
+    }
+
+}

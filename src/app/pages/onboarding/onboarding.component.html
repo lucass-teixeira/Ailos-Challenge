@@ -5,7 +5,11 @@
             <h1>Nova admissão cooperado</h1>
             <p>Cadastro/Admissão do Coperado/ Nova Admissoão de Cooperado</p>
         </div>
-        <img class="hamburguer-menu" src="../../../assets/hamburguer-menu.svg" />
+        <img class="hamburguer-menu" src="../../../assets/hamburguer-menu.svg" (click)="openMenu = true" />
+
+        <div class="onboarding-header-container-buttons">
+            
+        </div>
     </div>
 
 
@@ -25,34 +29,35 @@
 
 
     <ng-container *ngIf="cooperator$">
-        <div *ngFor="let c of (cooperator$ | async) as cooperators">
-            <div class="card-container">
-                <div class="card-container-header">
-                    <h1>Situação Cadastral do CPF</h1>
-                    <h3>Consulta da receita federal</h3>
+        <div *ngFor="let c of (cooperator$ | async) as cooperators" class="onboarding-result-container">
+
+            <app-card [title]="'Situação Cadastral do CPF'" [subtitle]="'Consulta da receita federal'">
+                <div class="flex">
+                    <fa-icon icon="user" pull="left"></fa-icon>
+                    <div class="item-lf-margin card-container-footer-name">
+                        <h4>Nome</h4>
+                        <p class="opaque">{{c.name}}</p>
+                    </div>
                 </div>
 
-                <div class="card-container-footer">
-                    <div class="flex">
-                        <fa-icon icon="user" pull="left"></fa-icon>
-                        <div class="item-lf-margin card-container-footer-name">
-                            <h4>Nome</h4>
-                            <p class="opaque" >{{c.name}}</p>
-                        </div>
+                <div class="flex">
+                    <fa-icon icon="circle-check" style="color: #2deb5f" class="fa-thin" pull="left"></fa-icon>
+                    <div class="item-lf-margin">
+                        <p>situação do CPF</p>
+                        <p class="opaque">{{c.situation}}</p>
                     </div>
-
-                    <div class="flex">
-                        <fa-icon icon="circle-check" style="color: #2deb5f" class="fa-thin" pull="left"></fa-icon>
-                        <div class="item-lf-margin">
-                            <p>situação do CPF</p>
-                            <p class="opaque">{{c.situation}}</p>
-                        </div>
-
-                    </div>
-
                 </div>
-            </div>
+            </app-card>
 
+            <app-card [title]="'Conta Aplicação'" [subtitle]="'Cooperativa Viacredi'">
+                <div class="flex">
+                    <fa-icon icon="user" pull="left"></fa-icon>
+                    <div class="item-lf-margin card-container-footer-name">
+                        <h4>Numero da conta</h4>
+                        <p class="opaque">{{c.checkingaccount.numberaccount}}</p>
+                    </div>
+                </div>
+            </app-card>
         </div>
     </ng-container>
 
@@ -92,5 +97,20 @@
         </div>
     </div>
 
+    <div class="menu-mobile" *ngIf="openMenu">
+        <div style="display: flex; justify-content: flex-end">
+            <fa-icon icon="close" pull="left" style="color: white; margin: 20px"
+                (click)="openMenu = false"></fa-icon>
+        </div>
+
+        <ul *ngFor="let element of menuElements">
+            <li (click)="openMenu =false">
+                <a>{{element.label}}</a>
+            </li>
+        </ul>
+
+    </div>
+
+    <app-side-nav></app-side-nav>
     <app-messages></app-messages>
 </div>

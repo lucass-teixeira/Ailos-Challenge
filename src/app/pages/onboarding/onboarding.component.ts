@@ -16,6 +16,17 @@ export class OnboardingComponent implements OnInit {
   public cooperator$: Observable<CheckCPFResponse[]>;
   showCPFButton = false;
   showTipContainer = false;
+
+  openMenu = false;
+
+  menuElements = [
+    {label: 'Onboarding', link: ''},
+    {label: 'Pesquisa', link: ''},
+    {label: 'Favoritos', link: ''},
+    {label: 'Chat', link: ''},
+    {label: 'Filtro', link: ''},
+    {label: 'Comunidade', link: ''},
+  ]
   constructor(private _messagesService: MessagesService, private _onBoardingService: OnBoardingService) { }
 
   ngOnInit(): void {
