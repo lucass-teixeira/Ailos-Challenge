@@ -1,5 +1,21 @@
 # AilosChallenge
 
+## Guide
+
+### Mock Server
+Run mock server first:
+#### open database folder in command line
+#### run "json-server --watch db.json"
+
+
+### Launch Application
+Install packages once
+### run "npm install"
+### run "npm start"
+
+
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.0.
 
 ## Development server
