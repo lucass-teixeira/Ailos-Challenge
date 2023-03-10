@@ -8,7 +8,7 @@
         <img class="hamburguer-menu" src="../../../assets/hamburguer-menu.svg" (click)="openMenu = true" />
 
         <div class="onboarding-header-container-buttons">
-            
+
         </div>
     </div>
 
@@ -99,8 +99,7 @@
 
     <div class="menu-mobile" *ngIf="openMenu">
         <div style="display: flex; justify-content: flex-end">
-            <fa-icon icon="close" pull="left" style="color: white; margin: 20px"
-                (click)="openMenu = false"></fa-icon>
+            <fa-icon icon="close" pull="left" style="color: white; margin: 20px" (click)="openMenu = false"></fa-icon>
         </div>
 
         <ul *ngFor="let element of menuElements">
