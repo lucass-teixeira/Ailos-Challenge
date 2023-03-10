@@ -2,7 +2,10 @@
 
 
 ## Design
+### Mobile
 ![Mobile](design/mobile.png)
+
+### Desktop
 ![Desktop](design/desktop.PNG)
 
 
