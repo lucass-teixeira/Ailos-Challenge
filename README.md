@@ -1,11 +1,12 @@
 # AilosChallenge
 
-## Guide
 
 ## Design
-![Mobile](design/mobile.PNG)
+![Mobile](design/mobile.png)
 ![Desktop](design/desktop.PNG)
 
+
+## Guide
 
 ### Mock Server
   * open database folder in command line
