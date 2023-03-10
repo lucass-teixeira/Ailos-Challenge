@@ -2,6 +2,11 @@
 
 ## Guide
 
+## Design
+![Mobile](design/mobile.PNG)
+![Desktop](design/desktop.PNG)
+
+
 ### Mock Server
   * open database folder in command line
   * run "json-server --watch db.json" in command line
